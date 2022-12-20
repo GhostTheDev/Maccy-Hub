@@ -1,5 +1,4 @@
 ## Ghost-Hub
-```lua
 Ghost Hub offers many features;
 
 - God Mode
@@ -8,4 +7,3 @@ Ghost Hub offers many features;
 - ESP
 - Player Speed / Jump Power
 - Much More
-```
