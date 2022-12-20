@@ -84,6 +84,76 @@ MainTab:AddToggle({
 	end    
 })
 
+MainTab:AddToggle({
+	Name = "ESP",
+	Default = false,
+	Callback = function(Value)
+        if #players > 1 then -- You as the executor.
+			table.remove(players, 1) -- Removes you from the table so it doesn't put the ESP around you.
+		end
+
+		local Players = game:GetService("Players"):GetChildren()
+		local RunService = game:GetService("RunService")
+		local Highlight = Instance.new("Highlight")
+		Highlight.Name = "Highlight"
+
+		for i, v in pairs(Players) do
+			repeat wait() until v.Character
+			if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+				local HighlightClone = Highlight:Clone()
+				HighlightClone.Adornee = v.Character
+				HighlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+				HighlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+				HighlightClone.Name = "Highlight"
+			end
+		end
+
+		game.Players.PlayerAdded:Connect(function(player)
+			repeat wait() until v.Character
+			if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+				local HighlightClone = Highlight:Clone()
+				HighlightClone.Adornee = v.Character
+				HighlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+				HighlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+				HighlightClone.Name = "Highlight"
+			end
+		end)
+
+		game.Players.PlayerRemoving:COnnect(function(playerRemoved)
+			playerRemoved.Character:FindFirstChild("HumanoidRootPart").Highlight:Destroy()
+		end)
+
+		RunService.Heartbeat:Connect(function()
+			for i, v in pairs(Players) do
+				repeat wait() until v.Character
+				if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+					local HighlightClone = Highlight.Clone()
+					HighlightClone.Adornee = v.Character
+					HighlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+					HighlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+					HighlightClone.Name = "Highlight"
+					task.wait()
+				end
+			end
+		end)
+	end    
+})
+
+MainTab:AddButton({
+    Name = "Kill All",
+    Callback = function()
+        if #players > 1 then -- You as the executor.
+			table.remove(players, 1) -- Removes you from the table so it doesn't kill you.
+		end
+		
+		game.Players.PlayerAdded:Connect(function()
+			for i, players in pairs(game:GetService("Players"):GetChildren()) do
+				players.Character.Humanoid.Health = 0
+			end
+		end)
+    end
+})
+
 -- Local Player Interaction
 
 LocalTab:AddSlider({
@@ -95,7 +165,7 @@ LocalTab:AddSlider({
 	Increment = 1,
 	ValueName = "Speed",
 	Callback = function(s)
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s -- Sets the speed of the slider you have decided to select.
 	end    
 })
 
@@ -108,7 +178,7 @@ LocalTab:AddSlider({
 	Increment = 1,
 	ValueName = "Jump Power",
 	Callback = function(s)
-		game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = s -- Sets the jump power of the slider you have selected.
 	end    
 })
 
