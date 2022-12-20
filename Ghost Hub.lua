@@ -119,6 +119,12 @@ ScriptsTab:AddButton({
 	Name = "Owl Hub",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+		OrionLib:MakeNotification({
+			Name = "Owl Hub",
+			Content = "Owl Hub is now open.",
+			Image = "rbxassetid://4483345998",
+			Time = 5
+		})
   	end    
 })
 
