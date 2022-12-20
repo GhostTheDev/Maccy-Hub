@@ -157,10 +157,16 @@ MainTab:AddButton({
 MainTab:AddButton({
 	Name = "Kick Someone",
 	Callback = function()
-		game.Players.PlayerAdded:Connect(function(all)
-			all:Kick("You have been kicked for cheating.")
-		end)
-	end
+		if #players > 1 then -- You as the executor.
+			table.remove(players, 1) -- Removes you from the table so it doesn't kick you.
+		end
+
+		game.Players.PlayerAdded:Connect(function(player)
+			for _, v in pairs(game.Players:GetPlayers()) do
+			wait(10)
+			v:Kick("You have been kicked for cheating. Please join back in 1 hour or you will be permanently banned.")
+		end
+	end)
 })
 
 -- Local Player Interaction
