@@ -154,6 +154,15 @@ MainTab:AddButton({
     end
 })
 
+MainTab:AddButton({
+	Name = "Kick Someone",
+	Callback = function()
+		game.Players.PlayerAdded:Connect(function(all)
+			all:Kick("You have been kicked for cheating.")
+		end)
+	end
+})
+
 -- Local Player Interaction
 
 LocalTab:AddSlider({

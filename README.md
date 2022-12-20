@@ -1,6 +1,4 @@
 ## Ghost-Hub
-Ghost Hub offers many features;
-
 - God Mode
 - Kill all
 - Aim Bot
