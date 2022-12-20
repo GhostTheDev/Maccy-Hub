@@ -58,19 +58,7 @@ local CreditsTab = Window:MakeTab({
 
 -- Main Interaction
 
-MainTab:AddButton({
-	Name = "Button1",
-	Callback = function()
-  	end    
-})
 
-MainTab:AddColorpicker({
-	Name = "Colorpicker",
-	Default = Color3.fromRGB(255, 0, 0),
-	Callback = function(Value)
-		print(Value)
-	end	  
-})
 
 -- Local Player Interaction
 
@@ -96,7 +84,7 @@ LocalTab:AddSlider({
 	Increment = 1,
 	ValueName = "Jump Power",
 	Callback = function(s)
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 	end    
 })
 
