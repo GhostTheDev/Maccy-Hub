@@ -140,5 +140,7 @@ ScriptsTab:AddButton({
 
 CreditsTab:AddParagraph("Coder","GhostDev#7318")
 
+CreditsTab:AddParagraph("Discord","GhostDev#7318")
+
 
 Library:Init()
