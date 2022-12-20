@@ -138,7 +138,9 @@ ScriptsTab:AddButton({
 
 -- Credits Interaction
 
-CreditsTab:AddParagraph("Coder","GhostDev#7318")
+CreditsTab:AddParagraph("Coder","GhostDev")
+
+CreditsTab:AddParagraph("GUI Designer","Shlexware, GhostDev")
 
 CreditsTab:AddParagraph("Discord","GhostDev#7318")
 
