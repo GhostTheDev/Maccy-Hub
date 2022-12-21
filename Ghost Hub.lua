@@ -508,7 +508,7 @@ local CreditsSection = CreditsTab:AddSection({
 })
 
 
-CreditsTab:AddParagraph("Coder","GhostDev")
+CreditsTab:AddParagraph("Coder","GhostDev#7318")
 
 
 CreditsTab:AddButton({
