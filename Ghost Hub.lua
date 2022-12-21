@@ -129,7 +129,7 @@ LocalTab:AddSlider({
 	Min = 16,
 	Max = 500,
 	Default = 16,
-	Color = Color3.fromRGB(85, 166, 71),
+	Color = Color3.fromRGB(71, 71, 71),
 	Increment = 1,
 	ValueName = "Speed",
 	Callback = function(s)
@@ -143,7 +143,7 @@ LocalTab:AddSlider({
 	Min = 50,
 	Max = 250,
 	Default = 16,
-	Color = Color3.fromRGB(85, 166, 71),
+	Color = Color3.fromRGB(71, 71, 71),
 	Increment = 1,
 	ValueName = "Jump Power",
 	Callback = function(s)
