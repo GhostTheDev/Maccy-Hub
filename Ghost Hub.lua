@@ -15,7 +15,7 @@
 
 ]]
 
-local Library = loadstring(game:HttpGet("https://pastebin.com/raw/c9STrGY4"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RealzzDev/Ghost-Hub/main/GUI%20Source"))()
 local Window = Library:MakeWindow({
 	Name = "👻 Ghost Hub",
 	HidePremium = false,
@@ -173,13 +173,15 @@ LocalTab:AddToggle({
 		local Character = Player.Character
 		local Humanoid = Character.Humanoid
  
+ 
 		Library:MakeNotification({
 			Name = "God Mode",
-			Content = "God Mode is now " + Value,
+			Content = "God Mode has been ",
 			Image = "rbxassetid://4483345998",
 			Time = 5
-		});
- 
+		})
+
+
 		Humanoid.MaxHealth = 999999
 		Humanoid.Health = Humanoid.MaxHealth / 2	
  
@@ -195,72 +197,13 @@ LocalTab:AddToggle({
 LocalTab:AddButton({
     Name = "Kill All",
     Callback = function()
-        if #players > 1 then -- You as the executor.
-			table.remove(players, 1) -- Removes you from the table so it doesn't kill you.
-		end
-		
+	local players = game.Players
 		game.Players.PlayerAdded:Connect(function()
 			for i, players in pairs(game:GetService("Players"):GetChildren()) do
 				players.Character.Humanoid.Health = 0
 			end
 		end)
     end
-})
-
-
-LocalTab:AddToggle({
-	Name = "ESP",
-	Default = false,
-	Callback = function(Value)
-        if #players > 1 then -- You as the executor.
-			table.remove(players, 1) -- Removes you from the table so it doesn't put the ESP around you.
-		end
-
-		local Players = game:GetService("Players"):GetChildren()
-		local RunService = game:GetService("RunService")
-		local Highlight = Instance.new("Highlight")
-		Highlight.Name = "Highlight"
-
-		for i, v in pairs(Players) do
-			repeat wait() until v.Character
-			if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
-				local HighlightClone = Highlight:Clone()
-				HighlightClone.Adornee = v.Character
-				HighlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
-				HighlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-				HighlightClone.Name = "Highlight"
-			end
-		end
-
-		game.Players.PlayerAdded:Connect(function(player)
-			repeat wait() until v.Character
-			if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
-				local HighlightClone = Highlight:Clone()
-				HighlightClone.Adornee = v.Character
-				HighlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
-				HighlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-				HighlightClone.Name = "Highlight"
-			end
-		end)
-
-		game.Players.PlayerRemoving:COnnect(function(playerRemoved)
-			playerRemoved.Character:FindFirstChild("HumanoidRootPart").Highlight:Destroy()
-		end)
-
-		RunService.Heartbeat:Connect(function()
-			for i, v in pairs(Players) do
-				repeat wait() until v.Character
-				if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
-					local HighlightClone = Highlight.Clone()
-					HighlightClone.Adornee = v.Character
-					HighlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
-					HighlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-					HighlightClone.Name = "Highlight"
-					task.wait()
-				end
-			end
-		end)
-	end    
 })
 
 
