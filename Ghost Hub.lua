@@ -78,31 +78,31 @@ end
 
 local LocalTab = Window:MakeTab({
     Name = "Local",
-    Icon = "rbxassetid://7733954760",
+    Icon = "rbxassetid://7743871002",
     PremiumOnly = false
 })
 
 local AnimTab = Window:MakeTab({
 	Name = "Animations",
-	Icon = "rbxassetid://4483345998",
+	Icon = "rbxassetid://7734020554",
 	PremiumOnly = false
 })
 
 local ScriptsTab = Window:MakeTab({
-	Name = "GH Scripts",
-	Icon = "rbxassetid://7733793319",
+	Name = "Scripts",
+	Icon = "rbxassetid://7733920644",
 	PremiumOnly = false
 })
 
 local GamesTab = Window:MakeTab({
 	Name = "Game Hubs",
-	Icon = "rbxassetid://4483345998",
+	Icon = "rbxassetid://7733799795",
 	PremiumOnly	= false
 })
 
 local CreditsTab = Window:MakeTab({
     Name = "Credits",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://7733671493",
     PremiumOnly = false
 })
 
@@ -191,7 +191,7 @@ LocalTab:AddToggle({
 	end    
 })
 
-
+dcdjk,nx                            
 LocalTab:AddButton({
     Name = "Kill All",
     Callback = function()
@@ -274,9 +274,10 @@ LocalTab:AddButton({
 		game.Players.PlayerAdded:Connect(function(player)
 			for _, v in pairs(game.Players:GetPlayers()) do
 			wait(10)
-			v:Kick("You have been kicked for cheating. Please join back in 1 hour or you will be permanently banned.")
-		end
-	end)
+				v:Kick("You have been kicked for cheating. Please join back in 1 hour or you will be permanently banned.")
+			end
+		end)
+	end
 })
 
 
@@ -327,11 +328,104 @@ local AnimationsSection = AnimTab:AddSection({
 })
 
 
+AnimTab:AddButton({
+	Name = "Cartoony",
+	Callback = function()
+		local Animate = game.Players.LocalPlayer.Character.Animate
+		Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=742637544"
+		Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=742638445"
+		Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=742640026"
+		Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=742638842"
+		Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=742637942"
+		Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=742636889"
+		Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=742637151"
+		game.Players.LocalPlayer.Character.Humanoid.Jump = true
+	end
+})
 
+
+AnimTab:AddButton({
+	Name = "Levitation",
+	Callback = function()
+		local Animate = game.Players.LocalPlayer.Character.Animate
+		Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616006778"
+		Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616008087"
+		Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616013216"
+		Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616010382"
+		Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616008936"
+		Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616003713"
+		Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616005863"
+		game.Players.LocalPlayer.Character.Humanoid.Jump = true
+	end
+})
+
+
+AnimTab:AddButton({
+	Name = "Ninja",
+	Callback = function()
+		local Animate = game.Players.LocalPlayer.Character.Animate
+		Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=656117400"
+		Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=656118341"
+		Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=656121766"
+		Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=656118852"
+		Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=656117878"
+		Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=656114359"
+		Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=656115606"
+		game.Players.LocalPlayer.Character.Humanoid.Jump = true
+	end
+})
+
+
+AnimTab:AddButton({
+	Name = "Pirate",
+	Callback = function()
+		local Animate = game.Players.LocalPlayer.Character.Animate
+		Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=750781874"
+		Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=750782770"
+		Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=750785693"
+		Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=750783738"
+		Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=750782230"
+		Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=750779899"
+		Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=750780242"
+		game.Players.LocalPlayer.Character.Humanoid.Jump = true
+	end
+})
+
+
+AnimTab:AddButton({
+	Name = "Vampire",
+	Callback = function()
+		local Animate = game.Players.LocalPlayer.Character.Animate
+		Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=1083445855"
+		Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=1083450166"
+		Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=1083473930"
+		Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=1083462077"
+		Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083455352"
+		Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083439238"
+		Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=1083443587"
+		game.Players.LocalPlayer.Character.Humanoid.Jump = true
+	end
+})
+
+
+AnimTab:AddButton({
+	Name = "Superhero",
+	Callback = function()
+		local Animate = game.Players.LocalPlayer.Character.Animate
+		Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616111295"
+		Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616113536"
+		Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616122287"
+		Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616117076"
+		Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616115533"
+		Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616104706"
+		Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616108001"
+		game.Players.LocalPlayer.Character.Humanoid.Jump = true
+	end
+})
 
 
 local R15Section = AnimTab:AddSection({
-	Name = "R15 Animations"
+	Name = "R15 Emotes"
 })
 
 
@@ -339,7 +433,7 @@ local R15Section = AnimTab:AddSection({
 
 
 local R6Section = AnimTab:AddSection({
-	Name = "R6 Animations"
+	Name = "R6 Emotes"
 })
 
 
@@ -368,7 +462,7 @@ local AdminSection = ScriptsTab:AddSection({
 ScriptsTab:AddButton({
 	Name = "Infinite Yield",
 	Callback = function()
-		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'), true))()
 	end
 })
 
@@ -418,7 +512,7 @@ local DoorsSection = GamesTab:AddSection({
 GamesTab:AddButton({
 	Name = "Doors Hub",
 	Callback = function()
-		loadstring(game:HttpGet(https://pastebin.com/raw/rysGLM7U))()
+		loadstring(game:HttpGet('https://pastebin.com/raw/rysGLM7U'))()
 	end
 })
 
