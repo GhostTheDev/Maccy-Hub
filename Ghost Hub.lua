@@ -17,9 +17,9 @@
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RealzzDev/Ghost-Hub/main/GUI%20Source"))()
 local Window = Library:MakeWindow({
-	Name = "👻 Ghost Hub",
+	Name = "Ghost Hub",
 	HidePremium = false,
-	IntroText = "👻 Ghost Hub",
+	IntroText = "👻 Ghost Hub | v1.0",
 	SaveConfig = true,
 	ConfigFolder = "GhostConfig"
 })
@@ -182,15 +182,6 @@ LocalTab:AddToggle({
 		local Player = game.Players.LocalPlayer
 		local Character = Player.Character
 		local Humanoid = Character.Humanoid
- 
- 
-		Library:MakeNotification({
-			Name = "God Mode",
-			Content = "God Mode has been ",
-			Image = "rbxassetid://4483345998",
-			Time = 5
-		})
-
 
 		Humanoid.MaxHealth = 999999
 		Humanoid.Health = Humanoid.MaxHealth / 2	
