@@ -286,7 +286,7 @@ local FarmSection = LocalTab:AddSection({
 })
 
 
-FarmTab:AddToggle({
+LocalTab:AddToggle({
 	Name = "Auto Tap",
 	Default = false,
 	Callback = function(Value)
@@ -296,7 +296,7 @@ FarmTab:AddToggle({
 })
 
 
-FarmTab:AddToggle({
+LocalTab:AddToggle({
     Name = "Auto Rebirth",
     Default = false,
     Callback = function(Value)
