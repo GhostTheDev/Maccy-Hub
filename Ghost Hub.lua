@@ -532,10 +532,3 @@ CreditsTab:AddButton({
 
 
 Library:Init()
-
-
---[[
-
-Made by GhostDev#7318 (Remove credits if you are a genuine asshole)
-
-]]
