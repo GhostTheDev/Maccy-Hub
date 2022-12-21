@@ -191,7 +191,7 @@ LocalTab:AddToggle({
 	end    
 })
 
-dcdjk,nx                            
+                         
 LocalTab:AddButton({
     Name = "Kill All",
     Callback = function()
