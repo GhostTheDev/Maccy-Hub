@@ -402,14 +402,6 @@ local ScriptsSection = ScriptsTab:AddSection({
 })
 
 
-ScriptsTab:AddButton({
-	Name = "Crash Game (Adopt Me! Only)",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/typical-overk1ll/scripts/main/TheBoothPlazaRickRoll", true))()
-	end
-})
-
-
 local AdminSection = ScriptsTab:AddSection({
 	Name = "Admin Panels"
 })
@@ -433,6 +425,19 @@ ScriptsTab:AddButton({
 ░╚═════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝  ╚═╝░░╚═╝░╚═════╝░╚═════╝░╚═════╝░
 
 ]]
+
+
+local AdoptSection = GamesTab:AddSection({
+	Name = "Adopt Me!"
+})
+
+
+GamesTab:AddButton({
+	Name = "VG Hub",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+	end
+})
 
 
 local BloxburgSection = GamesTab:AddSection({
