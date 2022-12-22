@@ -723,6 +723,9 @@ CreditsTab:AddButton({
 })
 
 
+CreditsTab:AddParagraph("Beta Testers", "Battery#3488")
+
+
 --[[
 
 ██████╗░░█████╗░  ███╗░░██╗░█████╗░████████╗  ████████╗░█████╗░██╗░░░██╗░█████╗░██╗░░██╗
