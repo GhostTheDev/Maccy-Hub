@@ -198,7 +198,7 @@ LocalTab:AddToggle({
 LocalTab:AddButton({
     Name = "Kill All",
     Callback = function()
-	loadstring(game:HttpGet('https://pastebin.com/raw/JGTCGFE2'))()
+		loadstring(game:HttpGet('https://pastebin.com/raw/JGTCGFE2'))()
     end
 })
 
@@ -261,33 +261,33 @@ LocalTab:AddButton({
 	Press K to enable the backpack/other core elements.
 ]]--
  
-	local player = game.Players.LocalPlayer
-	local mouse = player:GetMouse()
+		local player = game.Players.LocalPlayer
+		local mouse = player:GetMouse()
  
-	mouse.KeyDown:connect(function(key)
-    key = string.lower(key)
+		mouse.KeyDown:connect(function(key)
+ 	   key = string.lower(key)
  
-		if key == "p" then
-			for item = 1, 4 do
-				HopperBin = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
-				HopperBin.BinType = item
-			end
-		elseif key == "l" then
-			function UnlockWorkspace(a)
-				for n,part in pairs(a:GetChildren()) do
-					if(part:IsA("BasePart")) then 
-						part.Locked = false 
-					end
-					UnlockWorkspace(part)
+			if key == "p" then
+				for item = 1, 4 do
+					HopperBin = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+					HopperBin.BinType = item
 				end
+			elseif key == "l" then
+				function UnlockWorkspace(a)
+					for n,part in pairs(a:GetChildren()) do
+						if(part:IsA("BasePart")) then 
+							part.Locked = false 
+						end
+						UnlockWorkspace(part)
+					end
+				end
+				UnlockWorkspace(workspace)
+			elseif key == "k" then
+				local StarterGui = game:GetService("StarterGui")
+				StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
 			end
-			UnlockWorkspace(workspace)
-		elseif key == "k" then
-			local StarterGui = game:GetService("StarterGui")
-			StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
-		end
-	end)
-end
+		end)
+	end
 })
 
 
