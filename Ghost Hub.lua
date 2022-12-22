@@ -287,6 +287,7 @@ LocalTab:AddButton({
 			StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
 		end
 	end)
+end
 })
 
 
@@ -547,6 +548,7 @@ AnimTab:AddButton({
 		Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083182000"
 		Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=1083189019"
 		game.Players.LocalPlayer.Character.Humanoid.Jump = true
+    end
 })
 
 
