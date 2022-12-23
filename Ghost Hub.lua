@@ -194,13 +194,19 @@ LocalTab:AddToggle({
 	end    
 })
 
+
+LocalTab:AddButton({
+	Name = "Bring All",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Bring%20All'))()
+	end
+})
+
                          
 LocalTab:AddButton({
     Name = "Kill All",
     Callback = function()
-		for i, v in pairs (game:GetService("Players"):GetPlayers()) do
-			v.Character:FindFirstChild("Humanoid").Health = 0
-		end
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Kill%20All'))()
     end
 })
 
