@@ -38,6 +38,8 @@ local Window = Library:MakeWindow({
 
 _G.autoTap = true
 _G.autoRebirth = true
+_G.FemKess = "FemWare On Top"
+		
 
 
 --[[
@@ -610,6 +612,14 @@ ScriptsTab:AddButton({
 	Name = "Chat Spoofer",
 	Callback = function()
 		loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+	end
+})
+
+
+ScriptsTab:AddButton({
+	Name = "Criminality",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/JackHiggly/RobloxThings/main/FemWare0", true))()
 	end
 })
 
