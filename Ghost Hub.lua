@@ -8,12 +8,13 @@
 	░╚═════╝░╚═╝░░╚═╝░╚════╝░╚═════╝░░░░╚═╝░░░  ╚═╝░░╚═╝░╚═════╝░╚═════╝░
    \_____________________________________________________________________/
                                 
-                                  Ghost Hub
+                                  Ghost Hub									
 							    
-							Made by GhostDev#7318
-						https://discord.gg/YEQTh4gn2k
+							Made by GhostDev#7318							
+						https://discord.gg/YEQTh4gn2k						
 
 ]]
+
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RealzzDev/Ghost-Hub/main/GUI%20Source"))()
 local Window = Library:MakeWindow({
@@ -36,10 +37,9 @@ local Window = Library:MakeWindow({
 
 ]]
 
+
 _G.autoTap = true
 _G.autoRebirth = true
-_G.FemKess = "FemWare On Top"
-		
 
 
 --[[
@@ -52,6 +52,8 @@ _G.FemKess = "FemWare On Top"
 ╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═════╝░
 
 ]]
+
+
 function autoTap()
     while _G.autoTap == true do
         game:GetService("ReplicatedStorage").Remotes.Tap:FireServer()
@@ -77,6 +79,7 @@ end
 ░░░╚═╝░░░╚═╝░░╚═╝╚═════╝░╚═════╝░
 
 ]]
+
 
 local LocalTab = Window:MakeTab({
     Name = "Local",
@@ -612,14 +615,6 @@ ScriptsTab:AddButton({
 	Name = "Chat Spoofer",
 	Callback = function()
 		loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
-	end
-})
-
-
-ScriptsTab:AddButton({
-	Name = "Criminality",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/JackHiggly/RobloxThings/main/FemWare0", true))()
 	end
 })
 
