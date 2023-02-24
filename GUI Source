@@ -18,6 +18,14 @@ local OrionLib = {
 			Divider = Color3.fromRGB(0, 66, 18),
 			Text = Color3.fromRGB(0, 125, 34),
 			TextDark = Color3.fromRGB(0, 66, 18)
+		},
+		Maccy = {
+			Main = Color3.fromRGB(30, 30, 30),
+			Second = Color3.fromRGB(41, 41, 41),
+			Stroke = Color3.fromRGB(255, 255, 255),
+			Divider = Color3.fromRGB(189, 28, 28),
+			Text = Color3.fromRGB(255, 255, 255),
+			TextDark = Color3.fromRGB(189, 189, 189),
 		}
 	},
 	SelectedTheme = "Default",
