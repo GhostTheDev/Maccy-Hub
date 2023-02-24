@@ -16,7 +16,7 @@
 ]]
 
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RealzzDev/Ghost-Hub/main/GUI%20Source"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostTheDev/Maccy-Hub/main/GUI%20Source"))()
 local Window = Library:MakeWindow({
 	Name = "Ghost Hub",
 	HidePremium = false,
