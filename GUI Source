@@ -22,8 +22,8 @@ local OrionLib = {
 		Maccy = {
 			Main = Color3.fromRGB(30, 30, 30),
 			Second = Color3.fromRGB(41, 41, 41),
-			Stroke = Color3.fromRGB(255, 255, 255),
-			Divider = Color3.fromRGB(189, 28, 28),
+			Stroke = Color3.fromRGB(189, 28, 28),
+			Divider = Color3.fromRGB(255, 255, 255),
 			Text = Color3.fromRGB(255, 255, 255),
 			TextDark = Color3.fromRGB(189, 189, 189),
 		}
