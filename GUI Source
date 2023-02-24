@@ -699,7 +699,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			AnchorPoint = Vector2.new(0.5, 0.5),
 			Position = UDim2.new(0.5, 0, 0.4, 0),
 			Size = UDim2.new(0, 28, 0, 28),
-			ImageColor3 = Color3.fromRGB(0, 66, 18),
+			ImageColor3 = Color3.fromRGB(189, 28, 28),
 			ImageTransparency = 1
 		})
 
@@ -710,7 +710,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			Position = UDim2.new(0.5, 19, 0.5, 0),
 			TextXAlignment = Enum.TextXAlignment.Center,
 			Font = Enum.Font.GothamBold,
-			TextColor3 = Color3.fromRGB(0, 125, 33),
+			TextColor3 = Color3.fromRGB(189, 28, 28),
 			TextTransparency = 1
 		})
 
