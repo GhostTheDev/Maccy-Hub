@@ -18,9 +18,9 @@
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostTheDev/Maccy-Hub/main/GUI%20Source"))()
 local Window = Library:MakeWindow({
-	Name = "Ghost Hub",
+	Name = "Maccy Hub",
 	HidePremium = false,
-	IntroText = "Ghost Hub | v1.0",
+	IntroText = "Maccy | v1.0",
 	SaveConfig = true,
 	ConfigFolder = "GhostConfig"
 })
